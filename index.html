@@ -4,157 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Make Biology Great Again</title>
-    <style>
-        :root {
-            --primary-background: #15202B;
-            --secondary-background: #192734;
-            --text-color: #FFFFFF;
-            --secondary-text: #8899A6;
-            --border-color: #38444D;
-            --accent-color: #1DA1F2;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--primary-background);
-            color: var(--text-color);
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        header {
-            border-bottom: 1px solid var(--border-color);
-            padding: 20px 0;
-            margin-bottom: 20px;
-        }
-
-        .header-content {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        .mission {
-            background-color: var(--secondary-background);
-            border-radius: 15px;
-            padding: 20px;
-            margin-bottom: 30px;
-        }
-
-        .manifesto {
-            background-color: var(--secondary-background);
-            border-radius: 15px;
-            padding: 20px;
-            margin: 30px 0;
-            font-size: 1.1em;
-            line-height: 1.7;
-        }
-
-        .manifesto p {
-            margin-bottom: 15px;
-        }
-
-        .manifesto strong {
-            color: var(--accent-color);
-        }
-
-        .calculator-example {
-            background-color: var(--secondary-background);
-            border: 1px solid var(--border-color);
-            border-radius: 15px;
-            padding: 20px;
-            margin-bottom: 20px;
-        }
-
-        .resource-card {
-            background-color: var(--secondary-background);
-            border: 1px solid var(--border-color);
-            border-radius: 15px;
-            padding: 20px;
-            margin-bottom: 20px;
-            transition: transform 0.2s;
-        }
-
-        .resource-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .resource-card h3 {
-            color: var(--accent-color);
-            margin-bottom: 10px;
-        }
-
-        .resource-card p {
-            color: var(--secondary-text);
-            margin-bottom: 15px;
-        }
-
-        .resource-link {
-            display: inline-block;
-            color: var(--accent-color);
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .resource-link:hover {
-            text-decoration: underline;
-        }
-
-        .prompt {
-            color: var(--text-color);
-            margin-bottom: 15px;
-        }
-
-        .response {
-            color: var(--secondary-text);
-            background-color: var(--primary-background);
-            padding: 15px;
-            border-radius: 10px;
-        }
-
-        .tag {
-            color: var(--accent-color);
-            font-size: 14px;
-            margin-bottom: 10px;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background-color: var(--accent-color);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 20px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 20px;
-        }
-
-        .cta-button:hover {
-            opacity: 0.9;
-        }
-
-        .section-title {
-            color: var(--text-color);
-            margin: 40px 0 20px 0;
-            font-size: 24px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
@@ -164,10 +14,126 @@
             </div>
         </header>
 
+        <div class="calculator-showcase">
+            <div class="calculator-intro">
+                Experience biology like never before with our AI-powered Biology Calculator
+            </div>
+
+            <div class="calculator-example">
+                <div class="tag">#Multi-Step-Analysis</div>
+                <div class="prompt">
+                    <strong>Prompt:</strong> How many mitochondria would fit inside a typical human liver cell, assuming both are roughly spherical?
+                </div>
+                <div class="response">
+                    A typical human hepatocyte (liver cell) has a volume of 7000 μm³ <a href="https://bionumbers.hms.harvard.edu/bionumber.aspx?id=104616" class="bnid" target="_blank">(BNID: 104616)</a>, while a typical mitochondrion has a volume of 0.5 μm³ <a href="https://bionumbers.hms.harvard.edu/bionumber.aspx?id=103438" class="bnid" target="_blank">(BNID: 103438)</a>. Dividing these volumes, approximately 14,000 mitochondria could theoretically fit inside a typical human liver cell! This is a theoretical maximum; the actual number is likely lower due to packing inefficiencies and irregular shapes of both organelles.
+                </div>
+                <button class="show-analysis-btn" onclick="toggleAnalysis('mitochondria-analysis')">See Full Analysis →</button>
+                <div id="mitochondria-analysis" class="full-analysis">
+                    <h4>Data Collection</h4>
+                    <ul>
+                        <li>• Typical human hepatocyte volume: 7000 μm³ <a href="https://bionumbers.hms.harvard.edu/bionumber.aspx?id=104616" class="bnid" target="_blank">(BNID: 104616)</a></li>
+                        <li>• Typical mitochondrion volume: 0.5 μm³ <a href="https://bionumbers.hms.harvard.edu/bionumber.aspx?id=103438" class="bnid" target="_blank">(BNID: 103438)</a></li>
+                    </ul>
+                    
+                    <h4>Calculation Process</h4>
+                    <p class="calculation-step">Volume ratio calculation:</p>
+                    <p>7000 μm³ / 0.5 μm³ = 14,000 mitochondria</p>
+                    
+                    <h4>Important Considerations</h4>
+                    <ul>
+                        <li>• This is a theoretical maximum based on perfect packing</li>
+                        <li>• Real cells have irregular shapes and internal structures</li>
+                        <li>• Space is needed for other organelles and cytoplasm</li>
+                        <li>• Mitochondria are dynamic and can change shape</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="calculator-example">
+                <div class="tag">#Complex-Calculations</div>
+                <div class="prompt">
+                    <strong>Prompt:</strong> How long would it take for a single E. coli cell to grow into a 1-gram colony under ideal conditions?
+                </div>
+                <div class="response">
+                    Under ideal conditions with a generation time of 49 minutes <a href="https://bionumbers.hms.harvard.edu/bionumber.aspx?id=101304" class="bnid" target="_blank">(BNID: 101304)</a> and single cell mass of 0.95 pg <a href="https://bionumbers.hms.harvard.edu/bionumber.aspx?id=103905" class="bnid" target="_blank">(BNID: 103905)</a>, it would take approximately 40.8 hours. This involves 50 generations to reach 1.05 × 10¹⁵ cells, demonstrating the incredible exponential growth capabilities of bacteria!
+                </div>
+                <button class="show-analysis-btn" onclick="toggleAnalysis('ecoli-analysis')">See Full Analysis →</button>
+                <div id="ecoli-analysis" class="full-analysis">
+                    <h4>Initial Data</h4>
+                    <ul>
+                        <li>• Generation time: 49 minutes <a href="https://bionumbers.hms.harvard.edu/bionumber.aspx?id=101304" class="bnid" target="_blank">(BNID: 101304)</a></li>
+                        <li>• Single cell mass: 0.95 pg <a href="https://bionumbers.hms.harvard.edu/bionumber.aspx?id=103905" class="bnid" target="_blank">(BNID: 103905)</a></li>
+                    </ul>
+
+                    <h4>Step-by-Step Calculation</h4>
+                    <p class="calculation-step">1. Convert 1 gram to picograms:</p>
+                    <p>1 gram = 1 × 10¹⁵ pg</p>
+                    
+                    <p class="calculation-step">2. Calculate number of cells needed:</p>
+                    <p>Number of cells = (1 × 10¹⁵ pg) / (0.95 pg/cell) ≈ 1.05 × 10¹⁵ cells</p>
+                    
+                    <p class="calculation-step">3. Calculate generations needed:</p>
+                    <p>Number of generations = log₂(1.05 × 10¹⁵) ≈ 50 generations</p>
+                    
+                    <p class="calculation-step">4. Calculate total time:</p>
+                    <p>Total time = 50 generations × 49 minutes = 2450 minutes = 40.8 hours</p>
+
+                    <h4>Key Assumptions</h4>
+                    <ul>
+                        <li>• Constant growth rate throughout all generations</li>
+                        <li>• Unlimited nutrients and ideal conditions maintained</li>
+                        <li>• No cell death or competition effects</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="calculator-example">
+                <div class="tag">#Comparative-Analysis</div>
+                <div class="prompt">
+                    <strong>Prompt:</strong> Compare the surface area-to-volume ratio of a red blood cell to a typical bacterial cell. Which is more efficient at nutrient exchange?
+                </div>
+                <div class="response">
+                    Red blood cells have a surface area to volume ratio of 149,000 dm⁻¹ <a href="https://bionumbers.hms.harvard.edu/bionumber.aspx?id=101717" class="bnid" target="_blank">(BNID: 101717)</a>, while E. coli has approximately 6 μm⁻¹ based on its dimensions <a href="https://bionumbers.hms.harvard.edu/bionumber.aspx?id=100798" class="bnid" target="_blank">(BNID: 100798)</a>, <a href="https://bionumbers.hms.harvard.edu/bionumber.aspx?id=100799" class="bnid" target="_blank">(BNID: 100799)</a>. Converting to the same units reveals that red blood cells have a 400 times larger ratio, making them significantly more efficient at exchanging nutrients - a perfect adaptation for their oxygen transport role!
+                </div>
+                <button class="show-analysis-btn" onclick="toggleAnalysis('ratio-analysis')">See Full Analysis →</button>
+                <div id="ratio-analysis" class="full-analysis">
+                    <h4>Raw Data Collection</h4>
+                    <ul>
+                        <li>• Red blood cell SA:V ratio: 149,000 dm⁻¹ <a href="https://bionumbers.hms.harvard.edu/bionumber.aspx?id=101717" class="bnid" target="_blank">(BNID: 101717)</a></li>
+                        <li>• E. coli dimensions:</li>
+                        <li>  - Diameter: ~0.8 μm <a href="https://bionumbers.hms.harvard.edu/bionumber.aspx?id=100798" class="bnid" target="_blank">(BNID: 100798)</a></li>
+                        <li>  - Length: ~2 μm <a href="https://bionumbers.hms.harvard.edu/bionumber.aspx?id=100799" class="bnid" target="_blank">(BNID: 100799)</a></li>
+                    </ul>
+
+                    <h4>E. coli Calculations</h4>
+                    <p class="calculation-step">1. Surface Area (cylinder):</p>
+                    <p>SA = 2πrh + 2πr² ≈ 6 μm²</p>
+                    
+                    <p class="calculation-step">2. Volume:</p>
+                    <p>V ≈ 1 μm³</p>
+                    
+                    <p class="calculation-step">3. SA:V Ratio:</p>
+                    <p>6 μm²/μm³ = 6 μm⁻¹</p>
+
+                    <h4>Unit Conversion</h4>
+                    <p>Converting RBC ratio to μm⁻¹:</p>
+                    <p>149,000 dm⁻¹ = 0.0149 μm⁻¹</p>
+
+                    <h4>Evolutionary Implications</h4>
+                    <ul>
+                        <li>• RBCs' high ratio optimizes oxygen transport</li>
+                        <li>• Their biconcave shape maximizes surface area</li>
+                        <li>• Loss of nucleus creates more space for hemoglobin</li>
+                        <li>• Shape changes allow passage through capillaries</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
         <div class="mission">
             <h2>The Bio Revolution Is Coming</h2>
             <p>For too long, biology has been dismissed as "just memorization" while physics and chemistry were considered the "real sciences." This ends now. We're on the cusp of a biological revolution that will dwarf the tech boom – and you can be part of it.</p>
-            <a href="https://www.kaggle.com/code/haotiannnnn/make-biology-great-again" class="cta-button" target="_blank">Join the Revolution</a>
+            <a href="https://www.kaggle.com/code/haotiannnnn/make-biology-great-again" class="cta-button" target="_blank">Try the Bio Calculator →</a>
         </div>
 
         <div class="manifesto">
@@ -196,38 +162,15 @@
             <p>The secret weapon of leading biologists isn't memorization – it's having the right numbers at their fingertips. This searchable repository helps you develop the quantitative foundation that separates revolutionary thinkers from textbook reciters. When you know the numbers, you start seeing patterns that others miss.</p>
             <a href="https://bionumbers.hms.harvard.edu/aboutus.aspx" class="resource-link" target="_blank">Access the Database →</a>
         </div>
-
-        <h2 class="section-title">See the Future of Bio-Thinking</h2>
-
-        <div class="calculator-example">
-            <div class="tag">#CellBiology</div>
-            <div class="prompt">
-                <strong>Prompt:</strong> What is the approximate volume of a typical human cell compared to a bacterial cell?
-            </div>
-            <div class="response">
-                A typical human cell has a volume of approximately 2,000 μm³ (2 × 10⁻⁶ μL), while a bacterial cell like E. coli has a volume of about 1 μm³ (1 × 10⁻⁹ μL). This means human cells are roughly 2,000 times larger than bacterial cells by volume!
-            </div>
-        </div>
-
-        <div class="calculator-example">
-            <div class="tag">#Metabolism</div>
-            <div class="prompt">
-                <strong>Prompt:</strong> How many ATP molecules does a human brain use per second?
-            </div>
-            <div class="response">
-                The human brain uses approximately 6 kg of ATP per day, or about 70 mg per second. Given that one ATP molecule weighs 507 Da (8.4 × 10⁻²² g), this means the brain uses roughly 8.3 × 10²⁰ ATP molecules per second. This massive energy consumption represents about 20% of the body's total energy usage, despite the brain being only 2% of body weight!
-            </div>
-        </div>
-
-        <div class="calculator-example">
-            <div class="tag">#Genetics</div>
-            <div class="prompt">
-                <strong>Prompt:</strong> What's the information density of DNA compared to modern computer storage?
-            </div>
-            <div class="response">
-                DNA can store about 455 exabytes per gram, while modern SSDs store about 1 terabyte per 30 grams. This means DNA is approximately 13.65 million times more information-dense than our best computer storage! A single gram of DNA could theoretically store all of the world's data.
-            </div>
-        </div>
     </div>
+
+    <script>
+        function toggleAnalysis(id) {
+            const analysis = document.getElementById(id);
+            analysis.classList.toggle('show');
+            const button = analysis.previousElementSibling;
+            button.textContent = analysis.classList.contains('show') ? 'Hide Full Analysis ↑' : 'See Full Analysis →';
+        }
+    </script>
 </body>
 </html>

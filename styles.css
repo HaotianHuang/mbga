@@ -1,0 +1,237 @@
+:root {
+    --primary-background: #15202B;
+    --secondary-background: #192734;
+    --text-color: #FFFFFF;
+    --secondary-text: #8899A6;
+    --border-color: #38444D;
+    --accent-color: #1DA1F2;
+    --highlight-color: #17A2B8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--primary-background);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding-bottom: 40px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    border-bottom: 1px solid var(--border-color);
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.calculator-showcase {
+    margin: 30px 0;
+}
+
+.calculator-example {
+    background-color: var(--secondary-background);
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.2s;
+}
+
+.calculator-example:hover {
+    transform: translateY(-5px);
+}
+
+.calculator-intro {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.2em;
+    color: var(--highlight-color);
+}
+
+.full-analysis {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: var(--primary-background);
+    border-radius: 10px;
+    font-size: 0.95em;
+    line-height: 1.7;
+}
+
+.full-analysis.show {
+    display: block;
+}
+
+.full-analysis h4 {
+    color: var(--highlight-color);
+    margin: 15px 0 10px;
+}
+
+.full-analysis ul {
+    list-style-type: none;
+    margin-left: 20px;
+}
+
+.full-analysis li {
+    margin-bottom: 10px;
+}
+
+.full-analysis .calculation-step {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.show-analysis-btn {
+    display: inline-block;
+    color: var(--highlight-color);
+    background: none;
+    border: 1px solid var(--highlight-color);
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 0.9em;
+    transition: all 0.2s;
+}
+
+.show-analysis-btn:hover {
+    background-color: var(--highlight-color);
+    color: var(--primary-background);
+}
+
+.mission {
+    background-color: var(--secondary-background);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 30px 0;
+}
+
+.manifesto {
+    background-color: var(--secondary-background);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 30px 0;
+    font-size: 1.1em;
+    line-height: 1.7;
+}
+
+.manifesto p {
+    margin-bottom: 15px;
+}
+
+.manifesto strong {
+    color: var(--accent-color);
+}
+
+.resource-card {
+    background-color: var(--secondary-background);
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.2s;
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+}
+
+.resource-card h3 {
+    color: var(--accent-color);
+    margin-bottom: 10px;
+}
+
+.resource-card p {
+    color: var(--secondary-text);
+    margin-bottom: 15px;
+}
+
+.resource-link {
+    display: inline-block;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.resource-link:hover {
+    text-decoration: underline;
+}
+
+.prompt {
+    color: var(--text-color);
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.response {
+    color: var(--secondary-text);
+    background-color: var(--primary-background);
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 1.05em;
+}
+
+.tag {
+    color: var(--highlight-color);
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.cta-button:hover {
+    opacity: 0.9;
+}
+
+.section-title {
+    color: var(--text-color);
+    margin: 40px 0 20px 0;
+    font-size: 24px;
+    text-align: center;
+}
+
+.bnid {
+    color: var(--highlight-color);
+    font-size: 0.9em;
+    text-decoration: none;
+    transition: opacity 0.2s;
+    border-bottom: 1px dotted var(--highlight-color);
+}
+
+.bnid:hover {
+    opacity: 0.8;
+    text-decoration: none;
+    border-bottom: 1px solid var(--highlight-color);
+}
